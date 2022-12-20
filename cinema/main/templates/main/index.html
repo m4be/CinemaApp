@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        {% load static %}
+
+        <title>Cinema</title>
+        <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    </head>
+
+    <body>
+    <!-- Шапка -->
+
+    <header class="header">
+        <div class="header__content">
+            <div class="header__logo">
+                <a href="{% url 'index' %}" class="header__logo">CinemaApp</a>
+            </div>
+
+            <a href="{%url 'about'%}" class="header__about-as">О нас</a>
+        </div>
+    </header>
+
+
+        <!-- Плитки -->
+        <!-- Первый ряд плиток-->
+    <div class="container">
+        <div class="movies">
+            <div class="card">
+                <div class="movie" onclick="location.href = '{% url 'elki' %}'">
+                    <div class="movie__cover-inner">
+                        <img src="{%static 'main/img/elki.jpg'%}" class="movie__cover" alt="Ёлки 9"/>
+                        <div class="movie__cover--darkened"></div>
+                    </div>
+
+                    <div class="movie__info">
+                        <div class="movie__title">Ёлки 9</div>
+                        <div class="movie__category">комедия</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="movie" onclick="location.href = '{% url 'shel' %}'">
+                    <div class="movie__cover-inner">
+                        <img src="{%static 'main/img/shel.jpg'%}" class="movie__cover" alt="Щелкунчик и волшебная флейта"/>
+                        <div class="movie__cover--darkened"></div>
+                    </div>
+
+                    <div class="movie__info">
+                        <div class="movie__title">Щелкунчик и волшебная флейта</div>
+                        <div class="movie__category">фэнтези, мультфильм</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="movie" onclick="location.href = '{% url 'avatar' %}'">
+                    <div class="movie__cover-inner">
+                        <img src="{%static 'main/img/avatar.jpg'%}" class="movie__cover" alt="Аватар: Путь воды"/>
+                        <div class="movie__cover--darkened"></div>
+                    </div>
+
+                    <div class="movie__info">
+                        <div class="movie__title">Аватар: Путь воды</div>
+                        <div class="movie__category">фантастика, приключения, боевик, фэнтези</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="movie" onclick="location.href = '{% url 'heart' %}'">
+                    <div class="movie__cover-inner">
+                        <img src="{%static 'main/img/heart.jpg'%}" class="movie__cover" alt="Сердце пармы"/>
+                        <div class="movie__cover--darkened"></div>
+                    </div>
+
+                    <div class="movie__info">
+                        <div class="movie__title">Сердце пармы</div>
+                        <div class="movie__category">драма, фэнтези</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="movie" onclick="location.href = '{% url 'adams' %}'">
+                    <div class="movie__cover-inner">
+                        <img src="{%static 'main/img/adams.jpg'%}" class="movie__cover" alt="Семейка Аддамс"/>
+                        <div class="movie__cover--darkened"></div>
+                    </div>
+
+                    <div class="movie__info">
+                        <div class="movie__title">Семейка Аддамс</div>
+                        <div class="movie__category">фэнтези, комедия, семейный</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="movie" onclick="location.href = '{% url 'panther' %}'">
+                    <div class="movie__cover-inner">
+                        <img src="{%static 'main/img/panther.jpg'%}" class="movie__cover" alt="Чёрная Пантера: Ваканда навеки"/>
+                        <div class="movie__cover--darkened"></div>
+                    </div>
+
+                    <div class="movie__info">
+                        <div class="movie__title">Чёрная Пантера: Ваканда навеки</div>
+                        <div class="movie__category">драма, фантастика, боевик</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="movie" onclick="location.href = '{% url 'potter' %}'">
+                    <div class="movie__cover-inner">
+                        <img src="{%static 'main/img/potter.jpg'%}" class="movie__cover" alt="Гарри Поттер и философский камень"/>
+                        <div class="movie__cover--darkened"></div>
+                    </div>
+
+                    <div class="movie__info">
+                        <div class="movie__title">Гарри Поттер и философский камень</div>
+                        <div class="movie__category">приключения, фэнтези, семейный</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="movie" onclick="location.href = '{% url 'adam' %}'">
+                    <div class="movie__cover-inner">
+                        <img src="{%static 'main/img/adam.jpg'%}" class="movie__cover" alt="Черный Адам"/>
+                        <div class="movie__cover--darkened"></div>
+                    </div>
+
+                    <div class="movie__info">
+                        <div class="movie__title">Чёрный Адам</div>
+                        <div class="movie__category">фантастика, приключения, боевик, фэнтези</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="movie" onclick="location.href = '{% url 'fall' %}'">
+                    <div class="movie__cover-inner">
+                        <img src="{%static 'main/img/fall.jpg'%}" class="movie__cover" alt="Вышка"/>
+                        <div class="movie__cover--darkened"></div>
+                    </div>
+
+                    <div class="movie__info">
+                        <div class="movie__title">Вышка</div>
+                        <div class="movie__category">триллер</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="movie" onclick="location.href = '{% url 'troll' %}'">
+                    <div class="movie__cover-inner">
+                        <img src="{%static 'main/img/troll.jpg'%}" class="movie__cover" alt="Тролль"/>
+                        <div class="movie__cover--darkened"></div>
+                    </div>
+
+                    <div class="movie__info">
+                        <div class="movie__title">Тролль</div>
+                        <div class="movie__category">приключения, боевик, фэнтези</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="movie" onclick="location.href = '{% url 'amsterdam' %}'">
+                    <div class="movie__cover-inner">
+                        <img src="{%static 'main/img/amsterdam.jpg'%}" class="movie__cover" alt="Амстердам"/>
+                        <div class="movie__cover--darkened"></div>
+                    </div>
+
+                    <div class="movie__info">
+                        <div class="movie__title">Амстердам</div>
+                        <div class="movie__category">детектив, комедия, история</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="movie" onclick="location.href = '{% url 'fallout' %}'">
+                    <div class="movie__cover-inner">
+                        <img src="{%static 'main/img/fallout.jpg'%}" class="movie__cover" alt="Последствия"/>
+                        <div class="movie__cover--darkened"></div>
+                    </div>
+
+                    <div class="movie__info">
+                        <div class="movie__title">Последствия</div>
+                        <div class="movie__category">драма</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+{%load static%}
+  <meta charset="UTF-8">
+  <title>{%block title%}{%endblock%}</title>
+
+
+  <link rel="stylesheet" href="https://bootstraptema.ru/plugins/2015/bootstrap3/bootstrap.min.css" />
+  <link rel="stylesheet" href="{%static 'main/css/buy-ticket.css'%}">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__content">
+            <div class="header__logo">
+                <a href="{%url 'index'%}" class="header__logo">CinemaApp</a>
+            </div>
+
+            <a href="{%url 'about'%}" class="header__about-as">О нас</a>
+        </div>
+    </header>
+
+{% block content %}
+    {% endblock %}
+
+
+<form method="post">
+     {% csrf_token %}
+
+     <div class="container">
+        <div class="row ">
+            <div class="col-md-4 col-md-offset-4">
+
+                <div class="credit-card-div">
+                    <div class="panel panel-default" >
+
+                        <div style = "
+                            background: rgb(6,81,89);
+                            background: linear-gradient(90deg, rgba(6,81,89,1) 4%,
+                            rgba(9,121,117,1) 34%,
+                            rgba(4,199,192,1) 73%,
+                            rgba(0,84,255,1) 100%);">
+
+                        <div class="panel-heading">
+
+                            <div class="row ">
+                                <div class="col-md-12">
+                                    {{form.card_number}}
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <span class="help-block text-muted small-font" > Expiry Month</span>
+                                    {{form.expiry_m}}
+                                </div>
+
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <span class="help-block text-muted small-font" > Expiry Year</span>
+                                    {{form.expiry_y}}
+                                </div>
+
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <span class="help-block text-muted small-font" > CVC</span>
+                                    {{form.cvc}}
+                                </div>
+
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <img src="https://bootstraptema.ru/snippets/form/2016/form-card/card.png" class="img-rounded" />
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="col-md-12 pad-adjust">
+                                    {{form.name}}
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 pad-adjust">
+                                    <div class="checkbox"></div>
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
+                                    <a href = "{%url 'index'%}"><input type = "button"class="btn btn-danger" value="CANCEL" /></a>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
+                                    <input type="submit" onclick="congratulations()" class="btn btn-warning btn-block" value="PAY NOW"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div><!-- ./credit-card-div -->
+            </div>
+        </div>
+    </div><!-- /.container -->
+
+</form>
+    <script>
+        function congratulations() {
+		    alert("Покупка прошла успешно!");
+		}
+	</script>
+</body>
+</html>

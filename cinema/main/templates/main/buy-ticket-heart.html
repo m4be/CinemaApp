@@ -1,0 +1,65 @@
+{% extends 'main/buy-ticket.html'%}
+
+{%block title%}
+Сердце Пармы
+{%endblock%}
+
+{%load static%}
+{%block content%}
+
+    <div style="position: relative;
+                margin: 50px auto;
+
+                width: 1000px;
+                height: 390px;
+
+                background: #191c29;
+                border-radius: 5px; ">
+
+        <div style="position: relative;
+                    margin: auto;
+                    margin-left: 9%;
+                    border-radius: 10px;
+                    text-align: center;
+
+                    width: 274px;">
+            <img src = "{%static 'main/img/heart.jpg'%}" width=100%>
+        </div>
+
+        <div style="position: relative;
+                    border-radius: 10px;
+                    margin: auto;
+                    margin-right: 9%;
+                    margin-top: -350px;
+                    font-size: 170%;
+                    font-family: Georgia, serif;
+                    font-weight: bolder;
+
+                    width: 500px;
+                    height: 50px;
+                    color: white">
+            Сердце пармы (2022)
+        </div>
+
+        <div style="position: relative;
+                    border-radius: 10px;
+                    margin: auto;
+                    margin-right: 9%;
+                    margin-top: 10px;
+                    font-size: 120%;
+                    font-family: Georgia, serif;
+                    text-align: justify;
+
+                    width: 500px;
+                    height: 250px;
+                    color: white">
+            Русский князь Михаил и юная Тиче — дети разных народов, разных миров и разных богов.
+            Любовь молодого воителя и ведьмы-ламии кажется невозможной, но преодолевает все запреты,
+            запуская маховик рока. Отныне только от Михаила зависит будущее родной пармы, древних суровых
+            земель, напоенных чудодейственной мощью кровавых языческих богов. Здесь сталкиваются герои и
+            призраки, князья и шаманы, вогулы и московиты. Здесь расстаться с жизнью — не так страшно,
+            как выбрать между долгом, верностью братству и любовью к единственной женщине на свете.
+        </div>
+    </div>
+
+{%endblock%}

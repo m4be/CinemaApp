@@ -1,0 +1,121 @@
+.header {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+body {
+    background-color: #151823;
+    font-family: "Open Sans", sans-serif;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    height: 40px;
+}
+
+.header__logo {
+    font-size: 32px;
+    text-decoration: none;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-family: monospace;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #252B37;
+    background-color: #151823;
+    animation: textColor 10s ease infinite;
+}
+
+.header__logo:after {
+    position: absolute;
+    content: "";
+    top: 1vw;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.75);
+    -webkit-filter: blur(5vw);
+    -moz-filter: blur(5vw);
+    -ms-filter: blur(5vw);
+    filter: blur(5vw);
+    background: linear-gradient(270deg, #0fffc1, #7e0fff);
+    background-size: 200% 200%;
+    animation: animateGlow 10s ease infinite;
+}
+
+.header__about-as {
+    font-size: 30px;
+    text-decoration: none;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-family: monospace;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #252B37;
+    background-color: #151823;
+    animation: textColor 10s ease infinite;
+}
+
+
+@keyframes animateGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes textColor {
+    0% {
+        color: #7e0fff;
+    }
+
+    50% {
+        color: #0fffc1;
+    }
+
+    100% {
+        color: #7e0fff;
+    }
+}
+
+.credit-card-div span {
+    padding-top: 10px;
+}
+
+.credit-card-div img {
+    padding-top: 30px;
+}
+
+.credit-card-div .small-font {
+    font-size: 9px;
+}
+
+.credit-card-div .pad-adjust {
+    padding-top: 10px;
+}
+
+

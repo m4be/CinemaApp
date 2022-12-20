@@ -1,0 +1,65 @@
+{% extends 'main/buy-ticket.html'%}
+
+{%block title%}
+Щелкунчик и волшебная флейта
+{%endblock%}
+{%load static%}
+
+{%block content%}
+
+    <div style="position: relative;
+                margin: 50px auto;
+
+                width: 1000px;
+                height: 390px;
+
+                background: #191c29;
+                border-radius: 5px; ">
+
+
+        <div style="position: relative;
+                    margin: auto;
+                    margin-left: 10%;
+                    border-radius: 10px;
+                    text-align: center;
+
+                    width: 260px;">
+            <img src = "{%static 'main/img/shel.jpg'%}" width=100%>
+        </div>
+
+        <div style="position: relative;
+                    border-radius: 10px;
+                    margin: auto;
+                    margin-right: 10%;
+                    margin-top: -350px;
+                    font-size: 170%;
+                    font-family: Georgia, serif;
+                    font-weight: bolder;
+
+                    width: 500px;
+                    height: 50px;
+                    color: white">
+            Щелкунчик и волшебная флейта (2022)
+        </div><br>
+
+        <div style="position: relative;
+                    border-radius: 10px;
+                    margin: auto;
+                    margin-right: 10%;
+                    margin-top: 10px;
+                    font-size: 120%;
+                    font-family: Georgia, serif;
+                    text-align: justify;
+
+                    width: 500px;
+                    height: 250px;
+                    color: white">
+            Прекрасная Мари случайно попадает в удивительное королевство, власть в котором захватили хитрые крысы.
+            К счастью, она не одна: с ней верные друзья — барашек Кудряш и страус Красный Клюв, а также Щелкунчик —
+            заколдованный принц по имени Георг. Им предстоит головокружительное приключение, полное загадочных тайн и
+            встреч с мистическими чудовищами. И никто не отменял грандиозный бал-маскарад. Им нужно преодолеть все
+            препятствия и до рассвета найти волшебную флейту, которая поможет снять чары и вернет Мари домой.
+        </div>
+    </div>
+
+{%endblock%}

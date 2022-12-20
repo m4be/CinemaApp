@@ -1,0 +1,66 @@
+{% extends 'main/buy-ticket.html'%}
+
+{%block title%}
+Семейка Аддамс
+{%endblock%}
+
+
+{%load static%}
+{%block content%}
+
+    <div style="position: relative;
+        margin: 50px auto;
+
+        width: 1000px;
+        height: 390px;
+
+        background: #191c29;
+        border-radius: 5px; ">
+
+        <div style="position: relative;
+            margin: auto;
+            margin-left: 10%;
+            border-radius: 10px;
+            text-align: center;
+
+            width: 260px;">
+            <img src = "{%static 'main/img/adams.jpg'%}" width=100%>
+        </div>
+
+        <div style="position: relative;
+            border-radius: 10px;
+            margin: auto;
+            margin-right: 10%;
+            margin-top: -350px;
+            font-size: 170%;
+            font-family: Georgia, serif;
+            font-weight: bolder;
+
+            width: 500px;
+            height: 50px;
+            color: white">
+            Семейка Аддамс (1991)
+        </div>
+
+        <div style="position: relative;
+             border-radius: 10px;
+             margin: auto;
+             margin-right: 10%;
+             margin-top: 10px;
+             font-size: 120%;
+             font-family: Georgia, serif;
+             text-align: justify;
+
+             width: 500px;
+             height: 250px;
+             color: white">
+             Черная комедия о колоритной семейке, обитающей в не менее колоритном доме. Глава семьи,
+             Гомес Аддамс - очень самоуверенный и довольно импульсивный тип, который четверть века
+             тому назад страшно поругался со своим старшим братом Фестером, после чего тот пропал без
+             вести. Все попытки отыскать его были безуспешными. Но вот, однажды на пороге фамильного
+             особняка появляется некто, очень похожий на Фестера. Но состоится ли триумфальное возвращение
+             в семью «блудного брата»?
+        </div>
+    </div>
+
+{%endblock%}

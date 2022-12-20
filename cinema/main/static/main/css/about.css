@@ -1,0 +1,194 @@
+.header {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+body {
+    background-color: #151823;
+    font-family: "Open Sans", sans-serif;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    height: 40px;
+}
+
+.header__logo {
+    font-size: 32px;
+    text-decoration: none;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-family: monospace;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #252B37;
+    background-color: #151823;
+    animation: textColor 10s ease infinite;
+}
+
+.header__logo:after {
+    position: absolute;
+    content: "";
+    top: 1vw;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.75);
+    -webkit-filter: blur(5vw);
+    -moz-filter: blur(5vw);
+    -ms-filter: blur(5vw);
+    filter: blur(5vw);
+    background: linear-gradient(270deg, #0fffc1, #7e0fff);
+    background-size: 200% 200%;
+    animation: animateGlow 10s ease infinite;
+}
+
+.header__about-as {
+    font-size: 30px;
+    text-decoration: none;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-family: monospace;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #252B37;
+    background-color: #151823;
+    animation: textColor 10s ease infinite;
+}
+
+@keyframes animateGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes textColor {
+    0% {
+        color: #7e0fff;
+    }
+
+    50% {
+        color: #0fffc1;
+    }
+
+    100% {
+        color: #7e0fff;
+    }
+}
+
+.about_us {
+    color : white;
+    text-align: center;
+    font-size: 150%;
+    border: 3px white solid;
+    border-radius: 25px;
+    margin-top:10%;
+    margin: 10% auto;
+    width:50%;
+    height:30%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg,
+                            rgba(2,0,36,1) 10%,
+                            rgba(10,5,84,1) 28%,
+                            rgba(25,6,89,1) 50%,
+                            rgba(44,9,121,1) 72%,
+                            rgba(5,93,177,1) 100%,
+}
+
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+:root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+
+.card {
+    background: #191c29;
+    padding: 3px;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+}
+
+.card:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+}
+
+.card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+    var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+    var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}

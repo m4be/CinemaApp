@@ -1,0 +1,61 @@
+{% extends 'main/buy-ticket.html'%}
+
+{%block title%}
+Черная Пантера : Ваканда навеки
+{%endblock%}
+
+{%load static%}
+{%block content%}
+
+    <div style="position: relative;
+                margin: 50px auto;
+
+                width: 1000px;
+                height: 390px;
+
+                background: #191c29;
+                border-radius: 5px; ">
+
+        <div style="position: relative;
+                    margin: auto;
+                    margin-left: 10%;
+                    border-radius: 10px;
+                    text-align: center;
+
+                    width: 260px;">
+            <img src = "{%static 'main/img/panther.jpg'%}" width=100%>
+        </div>
+
+        <div style="position: relative;
+                    border-radius: 10px;
+                    margin: auto;
+                    margin-right: 10%;
+                    margin-top: -350px;
+                    font-size: 170%;
+                    font-family: Georgia, serif;
+                    font-weight: bolder;
+
+                    width: 500px;
+                    height: 50px;
+                    color: white">
+            Чёрная Пантера: Ваканда навеки (2022)
+        </div><br>
+
+        <div style="position: relative;
+                    border-radius: 10px;
+                    margin: auto;
+                    margin-right: 10%;
+                    margin-top: 10px;
+                    font-size: 120%;
+                    font-family: Georgia, serif;
+                    text-align: justify;
+
+                    width: 500px;
+                    height: 250px;
+                    color: white">
+            После смерти короля Т`Чаллы королева Рамонда, Шури, М`Баку, Окойе и
+            Дора Милаж сражаются, чтобы защитить Ваканду от мировых держав.
+        </div>
+    </div>
+
+{%endblock%}
